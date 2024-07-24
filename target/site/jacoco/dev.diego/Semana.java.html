@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Semana.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">java-list</a> &gt; <a href="index.source.html" class="el_package">dev.diego</a> &gt; <span class="el_source">Semana.java</span></div><h1>Semana.java</h1><pre class="source lang-java linenums">package dev.diego;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Semana {
+    private List&lt;String&gt; dias;
+
+<span class="fc" id="L10">    public Semana() {</span>
+<span class="fc" id="L11">        dias = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L12">    }</span>
+
+    public void crearDiasDeLaSemana() {
+<span class="fc" id="L15">        dias.add(&quot;Lunes&quot;);</span>
+<span class="fc" id="L16">        dias.add(&quot;Martes&quot;);</span>
+<span class="fc" id="L17">        dias.add(&quot;Miércoles&quot;);</span>
+<span class="fc" id="L18">        dias.add(&quot;Jueves&quot;);</span>
+<span class="fc" id="L19">        dias.add(&quot;Viernes&quot;);</span>
+<span class="fc" id="L20">        dias.add(&quot;Sábado&quot;);</span>
+<span class="fc" id="L21">        dias.add(&quot;Domingo&quot;);</span>
+<span class="fc" id="L22">    }</span>
+
+    public List&lt;String&gt; getDias() {
+<span class="fc" id="L25">        return new ArrayList&lt;&gt;(dias);</span>
+    }
+
+    public int getLargo() {
+<span class="fc" id="L29">        return dias.size();</span>
+    }
+
+    public void eliminarDia(String dia) {
+<span class="fc" id="L33">        dias.remove(dia);</span>
+<span class="fc" id="L34">    }</span>
+
+    public String getDia(int index) {
+<span class="pc bpc" id="L37" title="2 of 4 branches missed.">        if (index &gt;= 0 &amp;&amp; index &lt; dias.size()) {</span>
+<span class="fc" id="L38">            return dias.get(index);</span>
+        } else {
+<span class="nc" id="L40">            return null;</span>
+        }
+    }
+
+    public boolean existeDia(String dia) {
+<span class="fc" id="L45">        return dias.contains(dia);</span>
+    }
+
+    public void ordenarDiasAlfabeticamente() {
+<span class="fc" id="L49">        Collections.sort(dias);</span>
+<span class="fc" id="L50">    }</span>
+
+    public void vaciarLista() {
+<span class="fc" id="L53">        dias.clear();</span>
+<span class="fc" id="L54">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
